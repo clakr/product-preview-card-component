@@ -1,3 +1,5 @@
+import "./_authorModal.css";
+
 function changeTextOrSource(
   element: HTMLElement | HTMLAnchorElement | null,
   text: string
@@ -152,5 +154,6 @@ function keyDownListener(
   btnKeyboard.addEventListener("click", function () {
     modal.style.display = "block";
   });
+
   document.addEventListener("keydown", keyDownListener.bind(modal));
 })();
