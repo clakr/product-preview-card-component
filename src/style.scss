@@ -1,0 +1,128 @@
+:root {
+  --cream: #f2eae2;
+  --white: #ffffff;
+  --aurometalSaurus: #6c7289;
+  --gunmetal: #1c232b;
+  --deepAquamarine: #3d8168;
+
+  background-color: var(--cream);
+  font-family: "Fraunces", serif;
+}
+
+main {
+  min-height: 100vh;
+  min-height: 100svh;
+  padding-inline: 1.6rem;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 1rem;
+  overflow: hidden;
+  display: grid;
+  max-width: 34.3rem;
+
+  &__body {
+    padding: 2.4rem 2.3rem 2.4rem 2.4rem;
+  }
+
+  &__category {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.463rem;
+    letter-spacing: 0.5rem;
+    color: var(--aurometalSaurus);
+  }
+
+  &__product {
+    margin-top: 1.2rem;
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 3.2rem;
+    color: var(--gunmetal);
+  }
+
+  &__description {
+    margin-top: 1.6rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2.3rem;
+    color: var(--aurometalSaurus);
+  }
+
+  &__prices {
+    margin-top: 2.4rem;
+    display: flex;
+    column-gap: 1.9rem;
+    align-items: center;
+
+    &--current {
+      font-weight: 700;
+      font-size: 3.2rem;
+      line-height: 3.2rem;
+      color: var(--deepAquamarine);
+    }
+
+    &--old {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      font-size: 1.3rem;
+      line-height: 2.3rem;
+      color: var(--aurometalSaurus);
+    }
+  }
+
+  &__cta {
+    margin-top: 2rem;
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--deepAquamarine);
+    border-radius: 0.8rem;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.707rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 1.5rem 1.6rem;
+    column-gap: 1.161rem;
+
+    &:active {
+      background-color: #1a4032;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card {
+    overflow: hidden;
+    max-width: 60rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    &__body {
+      padding: 3.2rem 3.15rem 3.2rem 3.2rem;
+    }
+
+    &__product {
+      margin-top: 2rem;
+    }
+
+    &__description {
+      margin-top: 2.4rem;
+    }
+
+    &__prices {
+      margin-top: 2.9rem;
+    }
+
+    &__cta {
+      margin-top: 3rem;
+      padding-block: 1.5rem;
+    }
+  }
+}
